@@ -17,11 +17,11 @@ ExecReload=/bin/kill -USR1 $MAINPID
 LimitNOFILE=1048576
 LimitNPROC=64
 PrivateTmp=true
-PrivateDevices=true
+# PrivateDevices=true
 ProtectHome={{ caddy_systemd_protect_home }}
 ProtectSystem={{ caddy_systemd_protect_system }}
 ReadWriteDirectories={{ caddy_ssl_path }}
-AmbientCapabilities=CAP_NET_BIND_SERVICE
+# AmbientCapabilities=CAP_NET_BIND_SERVICE
 
 [Install]
 WantedBy=multi-user.target
